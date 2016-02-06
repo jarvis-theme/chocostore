@@ -5,8 +5,7 @@
 					<div id="welcome">Selamat datang {{user()->nama}}, {{HTML::link('member', 'Akun')}} | {{HTML::link('order-history', 'Daftar Pembelian' )}} | {{HTML::link('logout', 'Logout')}}</div>
 					@else 	
 					<div id="welcome">Selamat datang! Silahkan {{HTML::link('member', 'Login')}} atau {{HTML::link('member/create', 'Register')}}</div>
-					@endif      
-				  	<!--<div id="currency"> <a title="US Dollar"><b>$</b></a> <a title="Euro">€</a> <a title="Pound Sterling">£</a> </div>-->
+					@endif  
 				  	<div id="language"></div>
 				  	<!-- Mini Cart Start-->
 					<div id="shoppingcartplace">

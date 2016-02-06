@@ -53,7 +53,7 @@
 								</li>
 							</ul>
 						</div>
-						@if(!empty($kontak))
+						@if(!empty($kontak->fb))
 						<!--  FACEBOOK -->
 						<div id="facebook_footer" class="grid_3">
 							{{facebookWidget($kontak,null,'250','400')}}
@@ -63,6 +63,7 @@
 							</div>
 						</div>
 						@endif
+
 					</div>
 					<div class="clear"></div>
 				<div class="line-bottom1"></div>
@@ -101,21 +102,21 @@
 						<h3>Metode Pembayaran</h3>
 						<ul>
 						@foreach(list_banks() as $value)	
-							<li>{{HTML::image(bank_logo($value), $value->bankdefault->nama)}}</li>
+							<li>{{HTML::image(bank_logo($value), $value->bankdefault->nama, array('title' => $value->bankdefault->nama))}}</li>
 						@endforeach	
 						@foreach(list_payments() as $pay)
-                        	@if($pay->nama == 'paypal' && $pay->aktif == 1)
-                            <li><img src="{{url('img/bank/paypal.png')}}" alt="Paypal" title="Paypal" /></li>
-                        	@endif
-                            @if($pay->nama == 'ipaymu' && $pay->aktif == 1)
-                            <li><img src="{{url('img/bank/ipaymu.jpg')}}" alt="Ipaymu" title="Ipaymu" /></li>
-                            @endif
-                        	@if($pay->nama == 'bitcoin' && $pay->aktif == 1)
-                            <li><img src="{{url('img/bitcoin.png')}}" alt="Bitcoin" title="Bitcoin" /></li>
-                        	@endif
-                        @endforeach
+							@if($pay->nama == 'paypal' && $pay->aktif == 1)
+							<li><img src="{{url('img/bank/paypal.png')}}" alt="Paypal" title="Paypal" /></li>
+							@endif
+							@if($pay->nama == 'ipaymu' && $pay->aktif == 1)
+							<li><img src="{{url('img/bank/ipaymu.jpg')}}" alt="Ipaymu" title="Ipaymu" /></li>
+							@endif
+							@if($pay->nama == 'bitcoin' && $pay->aktif == 1)
+							<li><img src="{{url('img/bitcoin.png')}}" alt="Bitcoin" title="Bitcoin" /></li>
+							@endif
+						@endforeach
 						@if(count(list_dokus()) > 0 && list_dokus()->status == 1)
-						    <li><img src="{{url('img/bank/doku.jpg')}}" alt="Doku" title="Doku" /></li>
+							<li><img src="{{url('img/bank/doku.jpg')}}" alt="Doku" title="Doku" /></li>
 						@endif
 						</ul>
 					</div>
@@ -123,6 +124,40 @@
 				<div class="powered-main">
 					<div id="powered">
 						<div class="fl">&copy; {{date('Y')}} {{ Theme::place('title') }}. Powered by <a target="_blank" href="http://jarvis-store.com">Jarvis Store</a></div>
+						<div class="fr" id="sosmed">
+							<ul>
+								@if(!empty($kontak->fb))
+								<li>
+									<a href="{{url($kontak->fb)}}" title="Facebook"><span class="fa-stack fa"><i class="fa fa-circle fa-stack-2x" id="fb"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span></a>
+								</li>
+								@endif
+								@if(!empty($kontak->tw))
+								<li>
+									<a href="{{url($kontak->tw)}}" title="Twitter"><span class="fa-stack fa"><i class="fa fa-circle fa-stack-2x" id="tw"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a>
+								</li>
+								@endif
+								@if(!empty($kontak->gp))
+								<li>
+									<a href="{{url($kontak->gp)}}" title="Google+"><span class="fa-stack fa"><i class="fa fa-circle fa-stack-2x" id="gp"></i><i class="fa fa-google-plus fa-stack-1x fa-inverse"></i></span></a>
+								</li>
+								@endif
+								@if(!empty($kontak->pt))
+								<li>
+									<a href="{{url($kontak->pt)}}" title="Pinterest"><span class="fa-stack fa"><i class="fa fa-pinterest fa-2x" id="pt"></i></span></a>
+								</li>
+								@endif
+								@if(!empty($kontak->tl))
+								<li>
+									<a href="{{url($kontak->tl)}}" title="Tumblr"><span class="fa-stack fa"><i class="fa fa-circle fa-stack-2x" id="tl"></i><i class="fa fa-tumblr fa-stack-1x fa-inverse"></i></span></a>
+								</li>
+								@endif
+								@if(!empty($kontak->ig))
+								<li>
+									<a href="{{url($kontak->ig)}}" title="Instagram"><span class="fa-stack fa"><i class="fa fa-circle fa-stack-2x" id="ig-circle"></i><i class="fa fa-instagram fa-stack-1x fa-inverse" id="ig"></i></span></a>
+								</li>
+								@endif
+							</ul>
+						</div>
 						<div class="back-to-top" id="back-top">
 							<a title="Back to Top" href="javascript:void(0)" class="backtotop">Top</a>
 						</div>

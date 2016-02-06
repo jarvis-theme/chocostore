@@ -57,7 +57,7 @@ return array(
         'bestseller'=>'5',
         'featured'=>'5',
         'blog'=>'5',
-        'testimonial'=>'5',    
+        'testimonial'=>'3',    
     ),
     'banner' => true,
     'themesColor' => false

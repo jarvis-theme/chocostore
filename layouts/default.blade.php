@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8" />
 		{{ Theme::partial('seostuff') }}	
 		{{ Theme::partial('defaultcss') }}	
         {{ Theme::asset()->styles() }}	
 	</head>
-	<body class="top">
-		<div class="main-body-wrapper">
+	<body>
+		<div class="main-wrapper">
 			{{ Theme::partial('header') }}	
 			<section class="wrapper">
 				<div id="container">
 					{{ Theme::place('content') }}	
 				</div>
 			</section>
-			{{ Theme::partial('footer') }}	
-			{{ Theme::asset()->container('footer')->scripts() }}	
 		</div>
+		{{ Theme::partial('footer') }}	
 		<!-- JavaScripts -->
 		{{ Theme::partial('defaultjs') }}	
-    	{{-- Theme::asset()->scripts() --}}	
 	</body>
 </html>
