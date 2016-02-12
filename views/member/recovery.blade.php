@@ -45,7 +45,7 @@
 							<br>
 							<input type="submit" class="button" value="Reset Password">
 						</div>
-					{{Form::close}}
+					{{Form::close()}}
 				</div>
 			</div>
 		</div>
