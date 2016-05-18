@@ -1,5 +1,6 @@
 ﻿		<!--Right Part-->
 		<div id="column-right">
+			@if(list_category()->count() > 0)
 			<!--Categories Part Start-->
 			<div class="box">
 				<div class="box-heading">Kategori</div>
@@ -14,6 +15,7 @@
 				</div>
 			</div>
 			<!--Categories Part End-->
+			@endif
 			@if(count(best_seller()) > 0)
 			<section class="box">
 				<div class="box-heading"><span>Best Sellers</span></div>
@@ -135,7 +137,7 @@
 									Jumlah: &nbsp;
 									<input type="text" value="1" size="2" class="w30" name='qty'>
 									<input type="hidden" value="36" size="2" name="product_id"> &nbsp;
-									<input type='submit' class="button" id="button-cart" value="Beli">
+									<input type="submit" class="button" id="button-cart" value="Beli">
 								</div>
 							</div>
 						</form>
@@ -185,7 +187,7 @@
 			<div class="box">
 				<div class="box-heading">Reviews Product</div>
 				<div class="box-content">
-					{{pluginTrustklik()}}
+        			{{ pluginComment(product_url($produk), @$produk) }}
 				</div>
 			</div>
 		</div>

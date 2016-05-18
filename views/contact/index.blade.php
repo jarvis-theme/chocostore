@@ -93,7 +93,7 @@
 				<div class="content"> <b>Nama:</b><br>
 					<input class="large-field" type="text" placeholder="Nama" name="namaKontak" required>
 					<br><br>
-					<b>E-Mail:</b><br>
+					<b>Email:</b><br>
 					<input class="large-field" type="text" placeholder="your@email.com" name="emailKontak" required>
 					<br><br>
 					<b>Pesan:</b><br>

@@ -43,8 +43,8 @@
 			@if(count(list_blog(null, @$blog_category)) > 0)  
 				@foreach(list_blog() as $key=>$value)
 				<article>
-					<a href='{{blog_url($value)}}'><h2>{{$value->judul}}</h2></a>
-					<p><small class="date"><i class="icon-calendar"></i> {{date("d M Y", strtotime($value->updated_at))}}</small> | oleh: <small>{{$value->authors->nama}}</small></p>
+					<a href="{{blog_url($value)}}"><h2>{{$value->judul}}</h2></a>
+					<p><small class="date"><i class="icon-calendar"></i> {{date("d M Y", strtotime($value->created_at))}}</small> | oleh: <small>{{$value->authors->nama}}</small></p>
 					{{short_description($value->isi,250)}}
 					<p><a href="{{blog_url($value)}}" class="theme">Baca Selengkapnya →</a></p>
 				</article>

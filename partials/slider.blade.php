@@ -6,7 +6,7 @@
         @else
         <a href="#">
         @endif
-			<img src="{{slide_image_url($slides->gambar)}}" alt="Info Promo" />
+			<img src="{{slide_image_url($slides->gambar)}}" alt="{{$slides->title}}" />
 		</a>
 		@endforeach
 	</div>

@@ -31,13 +31,13 @@
 					<h2>Login</h2>
 					<form enctype="multipart/form-data" method="post" action="{{url('member/login')}}">
 						<div class="content">
-							<b>E-Mail:</b><br>
+							<b>Email:</b><br>
 							<input type="text" name="email" required>
 							<br><br>
 							<b>Password:</b><br>
 							<input type="password" name="password" required>
 							<br><br>
-							<a href="{{url('member/forget-password')}}">Lupa Password</a><br>
+							<a href="{{url('member/forget-password')}}">Lupa Password?</a><br>
 							<br>
 							<input type="submit" class="button" value="Login">
 						</div>

@@ -785,12 +785,29 @@ footer #sosmed ul li a{font-size: auto; text-shadow:none;}
 .fa-circle{color: #97856d}
 #fb{color:#3A5795}#tw{color:#1DC9E2}#gp{color:#DF4B38}#pt{color:#BD2126}#tl{color:#34465D}#ig{color:#fff}
 footer #sosmed ul li a:hover{opacity: 0.7}
+center#paypal button[type="submit"] {
+    background: #019CDE;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+}
+center#paypal button[type="submit"]:hover { opacity: 0.6 }
+form[name="order"] > input[name="SAVE"] {
+	background: #B5062D; border: medium none; padding: 10px; border-radius: 5px; color: #fff;
+}
+form[name="order"] > input[name="SAVE"]:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+.btn-veritrans { background: #00aee7; border: none; padding: 10px; border-radius: 5px; color: #fff }
+.btn-veritrans:hover { cursor: pointer; opacity: 0.7 }
+
 
 @media screen and (min-width:0px) and (max-width:360px) {
 	.header-top #cart .content{width:280px;}
 	.list-view .cart{ width: 100%; float: left; margin-top: 10px }
 }
-
 @media screen and (min-width:0px) and (max-width:320px) {
 	.htabs a {font-size:11px!important; padding:7px 7px 6px 7px!important;}
 	#header .links {padding:0;}

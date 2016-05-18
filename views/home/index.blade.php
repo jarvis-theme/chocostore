@@ -32,13 +32,13 @@
 
 			<!-- Advertisement Banner Start -->
 			<section id="banner" class="banner">
-			@foreach(horizontal_banner() as $item2)
-			<div>
-				<a target="_blank" href="{{URL::to($item2->url)}}">
-					{{HTML::image(banner_image_url($item2->gambar), 'Info Promo', array('width'=>'962px'))}}
-				</a>
-			</div>
-			@endforeach
+				@foreach(horizontal_banner() as $item2)
+				<div>
+					<a target="_blank" href="{{URL::to($item2->url)}}">
+						{{HTML::image(banner_image_url($item2->gambar), 'Info Promo', array('width'=>'962px'))}}
+					</a>
+				</div>
+				@endforeach
 			</section>
 			<!-- Advertisement Banner End-->
 		</section>

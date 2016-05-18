@@ -32,7 +32,9 @@
 							</div>
 							<div class="name"><a href="{{product_url($item)}}">{{$item->nama}}</a></div>
 							<div class="price">
-								<span class="price-old">{{($item->hargaCoret!='' || $item->hargaCoret!=0) ?price($item->hargaCoret ): ''}}</span>
+								@if($item->hargaCoret > 0)
+								<span class="price-old">{{price($item->hargaCoret)}}</span>
+								@endif
 								<span class="price-new">{{price($item->hargaJual)}}</span>
 							</div>
 						</div>
@@ -99,7 +101,7 @@
 				@endforeach	
 			</div>
 			<!--Product Grid End-->
-            {{$hasilpro->links()}}			
+            {{$hasilpro->links()}}
 			@else
 			<center><p>Pencarian anda tidak ditemukan.</p></center>
 			@endif

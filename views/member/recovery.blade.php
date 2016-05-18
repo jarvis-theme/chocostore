@@ -7,7 +7,7 @@
 					<ul>
 						<li><a href="{{url('member/login')}}">Login</a></li>
 							<li><a href="{{url('register')}}">Register</a></li>
-							<li><a href="{{url('member/forget-password')}}">Forgotten Password</a>
+							<li><a href="{{url('member/forget-password')}}">Lupa Password</a>
 						</li>  
 					</ul>
 				</div>

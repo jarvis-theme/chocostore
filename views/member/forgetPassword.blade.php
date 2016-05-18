@@ -37,7 +37,7 @@
 					 <form class="form-horizontal" action="{{url('member/forgetpassword')}}" method="post">
 						<div class="content">
 							<p>Silakan masukkan alamat email untuk mereset password anda.</p>
-							<b>E-Mail:</b><br>
+							<b>Email:</b><br>
 							<input type="text" value="" name="recoveryEmail" required>
 							<br><br>
 							<input type="submit" class="button" value="Reset Password">

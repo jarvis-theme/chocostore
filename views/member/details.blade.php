@@ -24,7 +24,7 @@
 		<div class="box-heading"><span>Top Product</span></div>
 		<div class="box-content">
 			<div class="box-product1">
-			@foreach(featured_product() as $item)
+				@foreach(featured_product() as $item)
 				<div>
 					<div class="image">
 						<a href="{{product_url($item)}}">
@@ -37,7 +37,7 @@
 						<span class="price-new">{{price($item->hargaJual)}}</span>
 					</div>
 				</div>
-			@endforeach   
+				@endforeach   
 			</div>
 		</div>
 	</section>
@@ -78,7 +78,7 @@
 						<td><input class="large-field" type="text" name="nama" value="{{$user->nama}}" required></td>
 					</tr>
 					<tr>
-						<td><span class="required">*</span> E-Mail:</td>
+						<td><span class="required">*</span> Email:</td>
 						<td><input class="large-field" type="text" name="email" value="{{$user->email}}" required></td>
 					</tr>
 					<tr>
@@ -134,7 +134,7 @@
 						<td><input class="large-field" type="password" value="" name="password"></td>
 					</tr>
 					<tr>
-						<td><span class="required">*</span> Ulangi Password:</td>
+						<td><span class="required">*</span> Ulangi Password Baru:</td>
 						<td><input class="large-field" type="password" value="" name="password_confirmation"></td>
 					</tr>
 				</tbody>
