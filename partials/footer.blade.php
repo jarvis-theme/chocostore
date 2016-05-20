@@ -5,16 +5,16 @@
 					<div id="customHome" class="container_12">
 						<div id="about_us_footer" class="grid_3">
 							<h2>{{about_us()->judul}}</h2>
-							{{shortDescription(about_us()->isi,300)}}
+							{{shortDescription(about_us()->isi,300)}} 
 						</div>
 
 						<div id="twitter_footer" class="grid_3">
 							<h2>Testimonial</h2>
 							<br>
-							@foreach(list_testimonial() as $items)	
+							@foreach(list_testimonial() as $items) 
 							<div class="twitter_footer">
 								<strong>{{$items->nama}}</strong></small>
-								<p>{{$items->isi}}</p>      
+								<p>{{$items->isi}}</p>
 							</div>
 							@endforeach	
 							<br>
@@ -24,15 +24,15 @@
 							<h2>Contact Us</h2>
 							<ul>
 								<li>
-									@if($kontak->telepon)	
+									@if($kontak->telepon) 
 									<!-- TELEPHONE -->
 									<ul id="tel" class="contact_column">
 										<li id="footer_telephone">{{$kontak->telepon}}</li>
-										@if($kontak->hp)	
+										@if($kontak->hp) 
 										<li id="footer_telephone2">{{$kontak->hp}}</li>
-										@endif	
+										@endif 
 									</ul>
-									@endif	
+									@endif 
 									<!-- EMAIL -->
 									<ul id="mail" class="contact_column">
 										<li id="footer_email">
@@ -101,8 +101,10 @@
 					<div class="column">
 						<h3>Metode Pembayaran</h3>
 						<ul>
-						@foreach(list_banks() as $value)	
+						@foreach(list_banks() as $value) 
+                        	@if($value->status == 1)
 							<li>{{HTML::image(bank_logo($value), $value->bankdefault->nama, array('title' => $value->bankdefault->nama))}}</li>
+							@endif
 						@endforeach	
 						@foreach(list_payments() as $pay)
 							@if($pay->nama == 'paypal' && $pay->aktif == 1)
@@ -167,4 +169,4 @@
 					</div>
 				</div>
 			</footer>
-			{{pluginPowerup()}}
+			{{pluginPowerup()}} 
