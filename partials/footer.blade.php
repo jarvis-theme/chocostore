@@ -102,7 +102,7 @@
 						<h3>Metode Pembayaran</h3>
 						<ul>
 						@foreach(list_banks() as $value) 
-                        	@if($value->status == 1)
+							@if($value->status == 1)
 							<li>{{HTML::image(bank_logo($value), $value->bankdefault->nama, array('title' => $value->bankdefault->nama))}}</li>
 							@endif
 						@endforeach	
@@ -121,7 +121,7 @@
 							<li><img src="{{url('img/bank/doku.jpg')}}" alt="Doku" title="Doku" /></li>
 						@endif
 						@if(count(list_veritrans()) > 0 && list_veritrans()->status == 1 && list_veritrans()->type == 1)
-							<li><img src="{{url('img/bank/veritrans.png')}}" alt="Veritrans" title="Veritrans"></li>
+							<li><img src="{{url('img/bank/midtrans.png')}}" alt="Midtrans" title="Midtrans"></li>
 						@endif
 						</ul>
 					</div>
@@ -159,6 +159,15 @@
 								@if(!empty($kontak->ig))
 								<li>
 									<a href="{{url($kontak->ig)}}" title="Instagram"><span class="fa-stack fa"><i class="fa fa-circle fa-stack-2x" id="ig-circle"></i><i class="fa fa-instagram fa-stack-1x fa-inverse" id="ig"></i></span></a>
+								</li>
+								@endif
+								@if(!empty($kontak->picmix))
+								<li>
+									<a href="{{url($kontak->picmix)}}" title="Picmix" target="_blank">
+										<span class="fa-stack">
+											<img class="picmix" src="//d3kamn3rg2loz7.cloudfront.net/blogs/event/icon-picmix.png">
+										</span>
+									</a>
 								</li>
 								@endif
 							</ul>

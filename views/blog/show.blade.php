@@ -42,7 +42,9 @@
 			</div>
 			<!--Breadcrumb Part End-->
 			<h1>{{$detailblog->judul}}</h1>
-			{{$detailblog->isi}}
+			<div class="blog">
+				{{$detailblog->isi}}
+			</div>
 			<h1>&nbsp;</h1>
 			<div class="buttons">
 			@if($next!=null)

@@ -45,7 +45,10 @@
 				<article>
 					<a href="{{blog_url($value)}}"><h2>{{$value->judul}}</h2></a>
 					<p><small class="date"><i class="icon-calendar"></i> {{date("d M Y", strtotime($value->created_at))}}</small> | oleh: <small>{{$value->authors->nama}}</small></p>
-					{{short_description($value->isi,250)}}
+					<div class="blog">
+						<img src="{{ imgString($value->isi) }}" class="blog-img" />
+						{{short_description($value->isi,250)}}
+					</div>
 					<p><a href="{{blog_url($value)}}" class="theme">Baca Selengkapnya →</a></p>
 				</article>
 				<h1></h1>

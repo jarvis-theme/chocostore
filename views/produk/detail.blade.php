@@ -135,7 +135,7 @@
 							<div class="cart">
 								<div>
 									Jumlah: &nbsp;
-									<input type="text" value="1" size="2" class="w30" name='qty'>
+									<input type="text" value="1" size="2" class="w30" name="qty" pattern="[0-9]">
 									<input type="hidden" value="36" size="2" name="product_id"> &nbsp;
 									<input type="submit" class="button" id="button-cart" value="Beli">
 								</div>

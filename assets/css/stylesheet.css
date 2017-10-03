@@ -802,6 +802,8 @@ form[name="order"] > input[name="SAVE"]:hover {
 }
 .btn-veritrans { background: #00aee7; border: none; padding: 10px; border-radius: 5px; color: #fff }
 .btn-veritrans:hover { cursor: pointer; opacity: 0.7 }
+.blog img { max-width: 100%; }
+.picmix { width: 25px; margin-top: -3px; }
 
 
 @media screen and (min-width:0px) and (max-width:360px) {
