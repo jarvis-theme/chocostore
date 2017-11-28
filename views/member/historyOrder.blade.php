@@ -1,5 +1,8 @@
-﻿		<!--Right Part-->
-		<div id="column-right">
+﻿		<!--Breadcrumb Part Start-->
+		<div class="breadcrumb"><a href="{{url('home')}}">Home</a> » Daftar Pembelian </div>
+		<!--Breadcrumb Part End-->
+		<!--Right Part-->
+		<div id="column-right" class="rcategory">
 			<!--Account Links End-->
 			@if(count(best_seller()) > 0)
 			<section class="box">
@@ -41,9 +44,6 @@
 		<!--Right End-->
 		<!--Middle Part Start-->
 		<div id="content">
-			<!--Breadcrumb Part Start-->
-			<div class="breadcrumb"> <a href="{{url('home')}}">Home</a> » Daftar Pembelian </div>
-			<!--Breadcrumb Part End-->
 			<h1>Daftar Pembelian</h1>
 			<div class="cart-info">
 				<table>
@@ -59,7 +59,7 @@
 						@foreach(list_order() as $item)
 					 	<tr>
 							<td>
-								{{prefixOrder().waktu($item->kodeOrder)}}<br>
+								{{prefixOrder().$item->kodeOrder}}<br>
 								@if($item->status==0)
 									<a href="{{url('konfirmasiorder/'.$item->id)}}" class="button">Konfirmasi</a>
 								@endif

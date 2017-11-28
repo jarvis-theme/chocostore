@@ -1,5 +1,8 @@
+		<!--Breadcrumb Part Start-->
+		<div class="breadcrumb"><a href="{{url('/')}}">Home</a> » Kontak</div>
+		<!--Breadcrumb Part End-->
 		<!--Right Part-->
-		<div id="column-right">
+		<div id="column-right" class="rcategory">
 			@if(best_seller()->count() > 0)
 			<section class="box">
 				<div class="box-heading"><span>Best Sellers</span></div>
@@ -63,9 +66,6 @@
 		<!--Right End-->
 		<!--Middle Part Start-->
 		<div id="content">
-			<!--Breadcrumb Part Start-->
-			<div class="breadcrumb"><a href="{{url('/')}}">Home</a> » Kontak</div>
-			<!--Breadcrumb Part End-->
 			<h1>Kontak</h1>
 			<div class="contact-info">
 				<div class="content">

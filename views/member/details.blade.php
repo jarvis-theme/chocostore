@@ -1,5 +1,8 @@
-﻿<!--Right Part-->
-<div id="column-right">
+﻿<!--Breadcrumb Part Start-->
+<div class="breadcrumb"><a href="{{url('home')}}">Home</a> » Account </div>
+<!--Breadcrumb Part End-->
+<!--Right Part-->
+<div id="column-right" class="rcategory">
 	<!--Account Links End-->
 	@if(best_seller()->count() > 0)
 	<section class="box">
@@ -64,9 +67,6 @@
 <!--Right End-->
 <!--Middle Part Start-->
 <div id="content">
-	<!--Breadcrumb Part Start-->
-	<div class="breadcrumb"> <a href="{{url('home')}}">Home</a> » Account </div>
-	<!--Breadcrumb Part End-->
 	<h1>Detail Account</h1>
 	{{Form::open(array('url'=>'member/update','method'=>'put','class'=>'form-horizontal'))}}
 		<h2>Data Personal</h2>

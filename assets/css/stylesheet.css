@@ -631,7 +631,7 @@ ul.list-bullet li a:hover { color:#444; -webkit-transition: all 0.3s ease-in-out
 	#footer .column h3 {cursor:pointer; display:block; text-align:center; padding:5px 0; background:#fff; box-shadow: 0 0 5px #CCCCCC; -webkit-box-shadow: 0 0 5px #CCCCCC;-moz-box-shadow: 0 0 5px #CCCCCC;}
 	#footer .column ul {display:none;}
 	#footer .column ul li {text-align:center;}
-	#footer-top-outside h2 {border-bottom: 1px dotted #ccc; text-align:center; padding-bottom:5px; margin-bottom:12px; margin-top: 12px}
+	#footer-top-outside h2 {border-bottom: 1px dotted #fff; text-align:center; padding-bottom:5px; margin-bottom:12px; margin-top: 12px}
 	.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12 {float: none;}
 	.container_12 {padding:0 8px; width:auto}
 	.mobile-fpart {display:block!important;}
@@ -678,6 +678,12 @@ ul.list-bullet li a:hover { color:#444; -webkit-transition: all 0.3s ease-in-out
 	.mobile-search {margin-bottom:10px;}
 	#twitter_footer, #facebook_footer{display:none;}
 	#contact_footer ul{padding:0;}
+	.confirm-form button[type="submit"] { margin-top: 5px; }
+	#contact_footer > ul { text-align: center; }
+	#contact_footer > ul > li > ul { display: inline-block; }
+	#about_us_footer { text-align: center; }
+	#about_us_footer > div { text-align: center; }
+	footer #sosmed { float: none; }
 }
 .label {
   display: inline;
@@ -804,7 +810,9 @@ form[name="order"] > input[name="SAVE"]:hover {
 .btn-veritrans:hover { cursor: pointer; opacity: 0.7 }
 .blog img { max-width: 100%; }
 .picmix { width: 25px; margin-top: -3px; }
-
+.align-left { text-align: left !important; }
+.header-top #cart .heading { background-position-y: 8px; }
+.rcategory { margin-top: -5px; }
 
 @media screen and (min-width:0px) and (max-width:360px) {
 	.header-top #cart .content{width:280px;}

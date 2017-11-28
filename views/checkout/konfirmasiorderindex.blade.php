@@ -7,7 +7,7 @@
 
 		<center>
 			<p>Silakan masukkan kode order yang mau anda cari!</p>
-			{{Form::open(array('url'=>'konfirmasiorder','method'=>'post','class'=>'form-inline'))}}
+			{{Form::open(array('url'=>'konfirmasiorder','method'=>'post','class'=>'form-inline confirm-form'))}}
 				<input type="text" class="input-large" placeholder="Kode Order" name="kodeorder">
 		  		<button type="submit" class="button"><i class="icon-check"></i> Cari</button>
 			{{Form::close()}}

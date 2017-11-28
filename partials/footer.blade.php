@@ -5,7 +5,7 @@
 					<div id="customHome" class="container_12">
 						<div id="about_us_footer" class="grid_3">
 							<h2>{{about_us()->judul}}</h2>
-							{{shortDescription(about_us()->isi,300)}} 
+							<div>{{shortDescription(about_us()->isi,300)}}</div>
 						</div>
 
 						<div id="twitter_footer" class="grid_3">
@@ -32,6 +32,7 @@
 										<li id="footer_telephone2">{{$kontak->hp}}</li>
 										@endif 
 									</ul>
+									<div class="clearfix"></div>
 									@endif 
 									<!-- EMAIL -->
 									<ul id="mail" class="contact_column">
@@ -39,6 +40,7 @@
 											<a href="mailto:{{$kontak->email}}">{{$kontak->email}}</a>
 										</li>
 									</ul>
+									<div class="clearfix"></div>
 									@if(!empty($kontak->bb))	
 									<!-- bb -->
 									<ul class="contact_column">
@@ -49,6 +51,7 @@
 											<span>{{$kontak->bb}}</span>
 										</li>
 									</ul>
+									<div class="clearfix"></div>
 									@endif	
 								</li>
 							</ul>
@@ -57,7 +60,7 @@
 						<!--  FACEBOOK -->
 						<div id="facebook_footer" class="grid_3">
 							{{facebookWidget($kontak,null,'250','400')}}
-							<div class="facebook-outer">
+							<div class="facebook-outers">
 								<div id="facebook">
 								</div>
 							</div>

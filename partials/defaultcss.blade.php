@@ -1,4 +1,4 @@
-    {{generate_theme_css('chocostore/assets/css/stylesheet.css?v=002')}}  
+    {{generate_theme_css('chocostore/assets/css/stylesheet.css?v=003')}}  
     {{generate_theme_css('chocostore/assets/css/slideshow.css')}}   
     {{generate_theme_css('chocostore/assets/css/carousel.css')}}    
     {{generate_theme_css('chocostore/assets/js/colorbox/colorbox.css')}}    

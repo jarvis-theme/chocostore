@@ -1,5 +1,8 @@
+		<!--Breadcrumb Part Start-->
+		<div class="breadcrumb"><a href="{{url('home')}}">Home</a> » Lupa Password</div>
+		<!--Breadcrumb Part End-->
 		<!--Right Part-->
-		<div id="column-right">
+		<div id="column-right" class="rcategory">
 			<!--Account Links Start-->
 			<div class="box">
 				<div class="box-content box-category">
@@ -20,9 +23,6 @@
 		<!--Right End-->
 		<!--Middle Part Start-->
 		<div id="content">
-			<!--Breadcrumb Part Start-->
-			<div class="breadcrumb"> <a href="{{url('home')}}">Home</a> » Lupa Password </div>
-			<!--Breadcrumb Part End-->
 			<h1>Lupa Password</h1>
 			<div class="login-content">
 				<div class="left">

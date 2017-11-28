@@ -1,5 +1,8 @@
+		<!--Breadcrumb Part Start-->
+		<div class="breadcrumb"><a href="{{url('home')}}">Home</a> » Testimonial</div>
+			<!--Breadcrumb Part End-->
 		<!--Right Part-->
-		<div id="column-right">
+		<div id="column-right" class="rcategory">
 			<!--Categories Part End-->
 			@if(best_seller()->count() > 0)
 			<section class="box">
@@ -64,9 +67,6 @@
 		<!--Right End-->
 		<!--Middle Part Start-->
 		<div id="content">
-			<!--Breadcrumb Part Start-->
-			<div class="breadcrumb"><a href="{{url('home')}}">Home</a> » Testimonial</div>
-			<!--Breadcrumb Part End-->
 			<h1>Testimonial</h1>
 			@foreach(list_testimonial() as $key=>$value)
 			<article>

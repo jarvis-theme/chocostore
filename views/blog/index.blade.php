@@ -1,9 +1,12 @@
-﻿		<!--Right Part-->
-		<div id="column-right">
+﻿		<!--Breadcrumb Part Start-->
+		<div class="breadcrumb"><a href="{{url('home')}}">Home</a> » Blog</div>
+		<!--Breadcrumb Part End-->
+		<!--Right Part-->
+		<div id="column-right" class="rcategory">
 			@if(list_blog_category()->count() > 0)
 			<!--Categories Part Start-->
 			<div class="box">
-				<div class="box-heading">Kategori Blog</div>
+				<div class="box-heading align-left">Kategori Blog</div>
 				<div class="box-content box-category">
 				<ul>
 				  @foreach(list_blog_category() as $key=>$value)
@@ -16,7 +19,7 @@
 			@endif
 			@if(best_seller()->count() > 0)
 			<section class="box">
-				<div class="box-heading"><span>Best Sellers</span></div>
+				<div class="box-heading align-left"><span>Best Sellers</span></div>
 				<div class="box-content">
 					<div class="box-product">
 					@foreach(best_seller() as $item)
@@ -36,15 +39,12 @@
 		<!--Right End-->
 		<!--Middle Part Start-->
 		<div id="content">
-			<!--Breadcrumb Part Start-->
-			<div class="breadcrumb"><a href="{{url('home')}}">Home</a> » Blog</div>
-			<!--Breadcrumb Part End-->
 			<h1>Blog</h1>
 			@if(count(list_blog(null, @$blog_category)) > 0)  
 				@foreach(list_blog() as $key=>$value)
 				<article>
 					<a href="{{blog_url($value)}}"><h2>{{$value->judul}}</h2></a>
-					<p><small class="date"><i class="icon-calendar"></i> {{date("d M Y", strtotime($value->created_at))}}</small> | oleh: <small>{{$value->authors->nama}}</small></p>
+					<p><small class="date"><i class="icon-calendar"></i> {{date("d M Y", strtotime($value->created_at))}}</small> | oleh: <small>{{@$value->authors->nama}}</small></p>
 					<div class="blog">
 						<img src="{{ imgString($value->isi) }}" class="blog-img" />
 						{{short_description($value->isi,250)}}

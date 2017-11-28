@@ -4,11 +4,11 @@
 		</div>
 		<!--Breadcrumb Part End-->
 		<!--Right Part-->
-		<div id="column-right">
+		<div id="column-right" class="rcategory">
 			@if(list_category()->count() > 0)
 			<!--Categories Part Start-->
 			<div class="box">
-				<div class="box-heading">Kategori</div>
+				<div class="box-heading align-left">Kategori</div>
 				<div class="box-content box-category">
 					<ul>
 					@foreach(list_category() as $item1)
@@ -23,7 +23,7 @@
 			@endif
 			@if(best_seller()->count() >0)
 			<section class="box">
-				<div class="box-heading"><span>Produk Terlaris</span></div>
+				<div class="box-heading align-left"><span>Produk Terlaris</span></div>
 				<div class="box-content">
 					<div class="box-product">
 						@foreach(best_seller() as $item2)
@@ -41,7 +41,7 @@
 			@endif
 			@if(count(featured_product()) > 0)
 			<section class="box">
-				<div class="box-heading"><span>Top Product</span></div>
+				<div class="box-heading align-left"><span>Top Product</span></div>
 				<div class="box-content">
 					<div class="box-product1">
 						@foreach(featured_product() as $item3)
@@ -64,7 +64,7 @@
 			@endif
 			@if(new_product()->count() > 0)
 			<section class="box">
-				<div class="box-heading"><span>New Product</span></div>
+				<div class="box-heading align-left"><span>New Product</span></div>
 				<div class="box-content">
 					<div class="box-product">
 						@foreach(new_product() as $item4)

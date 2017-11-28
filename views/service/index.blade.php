@@ -1,5 +1,8 @@
+		<!--Breadcrumb Part Start-->
+		<div class="breadcrumb"><a href="{{url('home')}}">Home</a> » Syarat dan Ketentuan</div>
+		<!--Breadcrumb Part End-->
 		<!--Right Part-->
-		<div id="column-right">
+		<div id="column-right" class="rcategory">
 			<!--Categories Part End-->
 			@if(best_seller()->count() > 0)
 			<section class="box">
@@ -64,9 +67,6 @@
 		<!--Right End-->
 		<!--Middle Part Start-->
 		<div id="content">
-			<!--Breadcrumb Part Start-->
-			<div class="breadcrumb"><a href="{{url('home')}}">Home</a> » Syarat dan Ketentuan</div>
-			<!--Breadcrumb Part End-->
 			<!-- <h1>Term and Service</h1> -->
 			<div class="accordion">
 				<div class="accordion-heading">Kebijakan Layanan</div>
